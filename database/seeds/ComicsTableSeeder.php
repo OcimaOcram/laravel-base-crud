@@ -2,6 +2,7 @@
 
 use App\Comic;
 use Faker\Generator as Faker;
+
 use Illuminate\Database\Seeder;
 
 class ComicsTableSeeder extends Seeder
@@ -19,6 +20,8 @@ class ComicsTableSeeder extends Seeder
             $comic->updated_at = "10:45:00";
             $comic->titolo = $faker->word();
             $comic->descrizione = $faker->sentence();
+            $comic->genere = $faker->word();
+            $comic->prezzo = $faker->randomDigit();
             $comic->save();
          }
     }
